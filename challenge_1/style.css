@@ -1,8 +1,8 @@
 .box {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     outline: 4px solid greenyellow;
-    font-size: 110px;
+    font-size: 140px;
     font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
     padding-bottom: 5px;
@@ -12,11 +12,11 @@
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
-    width: 370px;
+    width: 610px;
     margin:0px;
     position: absolute;
-    left: 20%;
-    top: 10%;
+    left: 13%;
+    top: 7%;
 }
 
 #scoreboard{
@@ -39,7 +39,7 @@
     margin:0px;
     position: absolute;
     left: 26%;
-    top:65%;
+    top:95%;
 }
 
 #score{

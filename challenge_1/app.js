@@ -94,7 +94,6 @@ const eventHandler = {
     },
 
     boxClick(){
-        let winner;
         let renderedTable = document.getElementsByClassName('box');
         for (let i =0; i < renderedTable.length; i++){
             renderedTable[i].onclick = (e)=>{
@@ -114,12 +113,36 @@ const eventHandler = {
                 }
             };
         }
-    }
+    },
+
+    nameEntry(){
+        let leftname = "";
+        let rightname = "";
+        document.getElementById('left-player').addEventListener("keydown", (e)=>{
+            if(e['key']==="Enter"){
+                e.preventDefault();
+                document.getElementById('left-player-input').parentNode.removeChild(document.getElementById('left-player-input'));
+                document.getElementById('left-name-switch').innerHTML =leftname;
+            }else{
+                leftname += e['key'];
+            }
+        });
+        document.getElementById('right-player').addEventListener("keydown", (e)=>{
+            if(e['key']==="Enter"){
+                e.preventDefault();
+                document.getElementById('right-player-input').parentNode.removeChild(document.getElementById('right-player-input'));
+                document.getElementById('right-name-switch').innerHTML =rightname;
+            }else{
+                rightname += e['key'];
+            }
+        });
     
+    }
 }
 
 window.onload = ()=>{
     eventHandler.renderboard();
     eventHandler.resetButton();
+    eventHandler.nameEntry();
 };
 
