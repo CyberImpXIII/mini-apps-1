@@ -8,13 +8,10 @@
 </head>
 <body>
     <div id="form-container">
-            <form method="post" action='/submission' enctype="multipart/form-data">
-                <div>
-                  <label for="file">Choose a file</label>
-                  <input type="file" id="file" name="myFile">
-                </div>
-                <div>
-                  <button>Send the file</button>
+            <form method="POST" action="/submission">
+                <!-- <textarea id="text" name="uploadtext" rows="10" col="500"></textarea><br> -->
+                <input type="file" id="text" accept=".json">
+                <input type="submit" value="submit">
         </form>
     </div>
     <div id='response-text'>

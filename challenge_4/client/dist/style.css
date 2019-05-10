@@ -1,0 +1,19 @@
+.box{
+    border: 4mm ridge greenyellow;
+    width: 70px;
+    height: 70px;
+}
+
+#boardcontainer{
+    width:770px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}

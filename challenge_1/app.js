@@ -123,7 +123,7 @@ const eventHandler = {
                 e.preventDefault();
                 document.getElementById('left-player-input').parentNode.removeChild(document.getElementById('left-player-input'));
                 document.getElementById('left-name-switch').innerHTML =leftname;
-            }else{
+            }else if(e['key']!=="Shift"){
                 leftname += e['key'];
             }
         });
@@ -132,7 +132,7 @@ const eventHandler = {
                 e.preventDefault();
                 document.getElementById('right-player-input').parentNode.removeChild(document.getElementById('right-player-input'));
                 document.getElementById('right-name-switch').innerHTML =rightname;
-            }else{
+            }else if(e['key']!=="Shift"){
                 rightname += e['key'];
             }
         });

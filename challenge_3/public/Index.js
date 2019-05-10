@@ -1,0 +1,4 @@
+module.exports = function Index(props) {
+  return React.createElement("div", null, "Index");
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2NsaWVudC9JbmRleC5qc3giXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsIkluZGV4IiwicHJvcHMiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBaUIsU0FBU0MsS0FBVCxDQUFlQyxLQUFmLEVBQXFCO0FBQ2xDLFNBQU8seUNBQVA7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbiBJbmRleChwcm9wcyl7XG4gICAgcmV0dXJuKDxkaXY+SW5kZXg8L2Rpdj4pXG59Il19

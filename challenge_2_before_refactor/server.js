@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const router = express.Router;
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.listen(port, ()=>{console.log('server.js running express is now listening on port 3000')});
 
@@ -14,18 +14,14 @@ app.get("/", (req, res)=>{
 });
 
 app.post("/submission", (req,res)=>{
-    console.log(req.route);
-    res.send();
-//     let test = Object.keys(req.body)[0].split('');
-//     test.pop();
-//     test = test.join('');
-//     let bodyString = JSON.parse(test);
-//     bodyString = childFlatten(bodyString);
-//     bodyString.forEach((element)=>{
-//         delete element.children
-//     });
-//     bodyString = flatChildList(bodyString);
-//    res.send(generateResponsePage(bodyString));
+    let bodyString = JSON.parse(req.body["uploadtext"]);
+    bodyString = childFlatten(bodyString);
+    bodyString.forEach((element)=>{
+        delete element.children
+    });
+    bodyString = flatChildList(bodyString);
+    
+    res.send(generateResponsePage(bodyString));
 });
 
 generateResponsePage = (string)=>{
@@ -56,6 +52,7 @@ flatChildList = (arr)=>{
     arr.forEach((obj)=>{
         string += Object.values(obj).toString() + " <br>";
     })
+    console.log(string);
     return string;
 }
 
@@ -65,6 +62,7 @@ childFlatten = (obj)=>{
         if(JSON.stringify(current["children"])!=="[]"){
             arr.push(current);
             current["children"].forEach((child)=>{
+                //console.log(child['firstName']);
                  recurse(child);
             })
         }else{
